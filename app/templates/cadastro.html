@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Sua Receita - Cadastro{% endblock %}
+
+{% block conteudo %}
+    <div class="form-center">
+        <div class="form-box">
+            <form method="POST" enctype='multipart/form-data'>
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                {% for field in form %}
+                    {{field.label_tag}}
+                    {{ field }}
+                    {{ field.errors }}
+                {% endfor %}
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

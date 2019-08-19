@@ -1,0 +1,110 @@
+body{
+    background-color:#FF7969;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* apenas a parte do logo e nome do site */
+nav{
+    background-color: #B32412;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 220vh;
+    padding: 10px;
+}
+.logoSite{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 100%;
+}
+nav .logoImg a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 10%;
+    text-decoration:none;
+    margin-left: 60px;
+}
+
+/* logo do site */
+nav img{ 
+    height: auto;
+    width: 50px;
+}
+
+/* título */
+nav h1{
+    text-align: center;
+    font-family: 'Niconne', cursive;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* links de receita e saiba mais */
+
+.divLinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divLinks a{
+    text-decoration:none;
+    text-align: center;
+    font-family: 'Sanchez', serif;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+/* login e cadastro */
+
+.loginCadastro{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    
+}
+
+.loginCadastro a{
+    text-decoration:none;
+    text-align: center;
+    font-family: 'Sanchez', serif;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.loginCadastro span{
+    text-decoration: none;
+    font-family: 'Sanchez', serif;
+    color: white;
+    font-size: 20pt;
+}
+
+/* imagem de fundo do site */
+
+header{
+    background-image: url("../img/background.jpg!d");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+footer{
+    
+}

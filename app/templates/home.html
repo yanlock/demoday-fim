@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block titulo %}Sua Receita{% endblock %}
+
+{% block conteudo %}
+    <div class="grid-home">
+        {% for rc in receita %}
+        <a href="">
+            <div class="bloco">
+                <div class="imagem">
+                    <img src="media/{{ rc.foto_receita }}" alt="{{ rc.nome_receita }}">
+                </div>
+                <div class="infos">
+                    <p>{{ rc.nome_receita }}</p>
+                    <p>{{ rc.descricao_receita }}</p>
+                </div>
+                <div class="by">Postada por: {{ rc.usuario }}</div>
+                <div class="avaliation">
+                    <div class="like"></div>
+                    <div class="dislike"></div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    
+{% endblock %}

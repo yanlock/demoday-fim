@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80px 1fr 120px;
+}
+
+header {
+    background: #7a1216;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.3em;
+    margin: 0 10px;
+    padding: 30px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul a:hover {
+    transform: translateY(-1px);
+    border-bottom: 1px solid #f52736;
+}
+
+header nav ul li {
+    padding: 0 20px;
+}
+
+header nav .buttons {
+    display: flex;
+    align-items: center;
+   margin-left: 30px;
+}
+header nav .buttons a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+header nav .buttons a .btn {
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    background: #f52736;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 10px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+header nav .buttons a .btn:hover {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.8);
+}
+
+.content {
+    padding: 20px;
+    background-image: url("img/fundo.jpg");
+}
+
+footer {
+    background:#e0434e;
+    height: 120px;
+    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* HOME */
+
+.grid-home {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1%;
+    grid-row-gap: 3%;
+}
+
+.grid-home a {
+    text-decoration: none;
+}
+
+.bloco {
+    background: rgb(241,241,241);
+    background: linear-gradient(180deg, rgba(241,241,241,1) 0%, rgba(235,233,233,1) 100%);
+    height: 320px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    transition: all 0.1s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bloco:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.bloco .imagem {
+    height: 200px;
+    border-bottom: 1px solid #e0434e;
+}
+
+.bloco .imagem img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.bloco .infos {
+    max-height: 80px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.bloco .infos p:nth-child(1) {
+    font-size: 1.2em;
+    margin-bottom: 4px;
+    color: #f52736;
+    font-weight: bold;
+    border-bottom: 1px solid #f52736;
+    text-transform: uppercase;
+}
+
+.bloco .infos p:nth-child(2) {
+    padding: 4px;
+    font-size: 0.9em;
+    color: rgb(46, 46, 46);
+    text-align: left;
+}
+
+.bloco .avaliation {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bloco .avaliation .like {
+    width: 22px;
+    height: 22px;
+    background: yellowgreen;
+}
+
+.bloco .avaliation .dislike {
+    width: 22px;
+    height: 22px;
+    background: red;
+}
+
+.bloco .by {
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    align-self: flex-start;
+    justify-self: center;
+}
+
+/* CADASTRO */
+
+.form-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    background: #7a1216;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1PX rgba(0, 0, 0, 0.6);
+    animation: 0.5s cubic-bezier(0, 0, 0.41, 2.20) 0s 1 teste;
+}
+
+.form-box form {
+    color: white;
+    display: flex;
+    flex-direction: column;   
+}
+
+.form-box form input {
+    min-width: 200px;
+    width: 20vw;
+    height: 40px;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6);
+    transition: all 0.2s cubic-bezier(0, 0, 0.41, 2.54);
+}
+
+.form-box form input:hover {
+    height: 45px;
+}
+
+.form-box form input:focus {
+    height: 45px;
+}
+
+.form-box form input[type='file'] {
+    background: #333;
+    padding: 10px;
+    border: 1px solid #f52736;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.form-box form label {
+    font-size: 1.2em;
+    padding-left: 5px;
+}
+
+.form-box form button {
+    height: 40px;
+    border: none;
+    background: #eee;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0, 0, 0.41, 2.54);
+    font-size: 1.1em;
+    outline: none;
+}
+
+.form-box form button:hover {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.8);
+}
+
+.form-box form ul {
+    list-style: none;
+    color: #e0434e;
+    background: #eee;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid firebrick;
+    font-weight: bold;
+}
+
+@keyframes teste {
+    0% {transform: scaleY(0.1)}
+    100% {transform: scaleY((1))}
+}
+
+/* CADASTRAR RECEITA */
+
+.form-box .cadastrar-title {
+    color: #333;
+    background: #EEE;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.form-box textarea {
+    min-width: 20vw;
+    max-width: 20vw;
+    max-height: 300px;
+    width: 20vw;
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.form-box select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.form-box select option {
+    color: #333;
+}
+
+.form-box select option:hover {
+    background: #e0434e;
+}
+
+
+/* PAINEL */
+
+.painel {
+    border: 2px solid #e0434e66;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    height: 100%;
+}

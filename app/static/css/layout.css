@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+nav{
+    background-color: #33B347;
+    display: flex;
+    height: 60px;
+    justify-content: space-evenly;
+}
+nav a{
+    color: black;
+    font-family: 'VT323', monospace;
+    font-size: 32pt;
+    text-decoration: none;
+} 

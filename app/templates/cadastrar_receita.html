@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Sua Receita - Cadastrar receita{% endblock %}
+
+{% block conteudo %}
+<div class="form-center">
+        <div class="form-box">
+            <h4>{{ msg }}</h4>
+            <h3 class='cadastrar-title'>Cadastre sua receita :3</h3>
+            <form method="POST" enctype='multipart/form-data'>
+                {% csrf_token %}
+                <input type="hidden" name="id" value="{{ user.pk }}">
+                <input type="text" name="nome_receita" placeholder="Qual o nome da sua receita?">
+                <textarea name="receita" placeholder="Qual a sua receita?" rows="10"></textarea>
+                <input type="text" name="descricao_receita" maxlength="100" placeholder="De uma breve descrição da sua receita">
+                <textarea name="ingredientes" placeholder="Quais ingredientes sua receita precisa?" rows="10"></textarea>
+                <label for="file">Escolha uma foto para sua receita:</label>
+                <input type="file" name="foto_receita">
+                <label for="prato">Prato:</label>
+                <select name="prato">
+                    <option value="Q">Quente</option>
+                    <option value="F">Frio</option>
+                </select>
+                <label for="tipo_prato">Tipo do prato:</label>
+                <select name="tipo_prato">
+                        <option value="S">Salgado</option>
+                        <option value="D">Doce</option>
+                        <option value="Vga">Vegano</option>
+                        <option value="Vge">Vegetariano</option>
+                </select>
+                <button type="submit">Cadastrar reiceta</button>
+            </form>
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Sua Receita - Login{% endblock %}
+
+{% block conteudo %}
+{% if user.is_authenticated %}
+<script>
+    window.location = "/painel"
+</script>
+{% else %}
+<div class="form-center">
+        <div class="form-box">
+            <form method="POST" enctype='multipart/form-data'>
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Login</button>
+            </form>
+        </div>
+</div>
+{% endif %}
+{% endblock%}
